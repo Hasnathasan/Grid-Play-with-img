@@ -1,71 +1,73 @@
-*{
-    margin: 0;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 /* Grid Column Names */
-.header{
-    grid-area: h;
-    background-color: aquamarine;
+.header {
+  grid-area: h;
+  background-color: aquamarine;
 }
-.nav{
-    grid-area: n;
-    background-color: aqua;
+.nav {
+  grid-area: n;
+  background-color: aqua;
 }
-.main{
-    grid-area: m;
-    background-color: lightseagreen;
+.main {
+  grid-area: m;
+  background-color: lightseagreen;
 }
-.aside{
-    grid-area: a;
-    background-color: lightgreen;
+.aside {
+  grid-area: a;
+  background-color: lightgreen;
 }
-.advertise{
-    grid-area: ad;
-    background-color: limegreen;
+.advertise {
+  grid-area: ad;
+  background-color: limegreen;
 }
-.footer{
-    grid-area: f;
-    background-color: lime;
+.footer {
+  grid-area: f;
+  background-color: lime;
 }
 /* Grid style */
-.grid-container{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(5,1fr);
-    grid-template-areas: 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
     "h  h  h  h"
     "n  m  m  a"
     "n  m  m  ad"
     "n  m  m  ad"
-    "f  f  f  f"
-    ;
-    gap: 5px;
+    "f  f  f  f";
+  gap: 5px;
 }
-.header, .nav, .main, .aside, .advertise, .footer{
-    padding: 40px;
-    text-align: center;
+.header,
+.nav,
+.main,
+.aside,
+.advertise,
+.footer {
+  padding: 40px;
+  text-align: center;
 }
-@media screen and (max-width: 576px){
-    .grid-container{
-        grid-template-areas: 
-        "h  h  h  h"
-        "n  n  n  n"
-        "m  m  m  m"
-        "a  a ad  ad"
-        "f  f  f  f"
-        ;
-    }
+@media screen and (max-width: 576px) {
+  .grid-container {
+    grid-template-areas:
+      "h  h  h  h"
+      "n  n  n  n"
+      "m  m  m  m"
+      "a  a ad  ad"
+      "f  f  f  f";
+  }
 }
-@media screen and (min-width: 577px) and (max-width: 992px){
-    .grid-container{
-        grid-template-areas: 
-        "h  h  h  h"
-        "n  m  m  m"
-        "n  m  m  m"
-        "a  a ad  ad"
-        "f  f  f  f"
-        ;
-    }
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .grid-container {
+    grid-template-areas:
+      "h  h  h  h"
+      "n  m  m  m"
+      "n  m  m  m"
+      "a  a ad  ad"
+      "f  f  f  f";
+  }
 }
